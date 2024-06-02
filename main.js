@@ -56,6 +56,7 @@ function scrollSlider() {
     const currectActiveDot = document.querySelector('.activePoint');
     currectActiveDot.classList.remove('activePoint');
     dots[orderImg].classList.add('activePoint');
+
 }
 
 // ----
@@ -63,15 +64,14 @@ function scrollSlider() {
 // images[0].classList.add('activePoint');
 
 for (let i = 0; i < dots.length; i++) {
-    // проходим циклом по точкам
     dots[i].addEventListener('click', () => {
-    // навешиваем событие клик на точку
         orderImg = i;
         console.log(orderImg)
         scrollSlider();
+
+        //записываем в функцию scrollSlider
         // const currectActiveDot = document.querySelector('.activePoint');
         // currectActiveDot.classList.remove('activePoint');
         // dots[orderImg].classList.add('activePoint');
     })
 }
-
